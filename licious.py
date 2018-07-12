@@ -53,7 +53,7 @@ with open(inputfile[:inputfile.find(".")]+"_ratings.csv","wb+") as csvfileref:
     parser.feed(r.text)
     rating = parser.data
     
-    menulink = "https://www.toronto.ca/explore-enjoy/festivals-events/summerlicious/summerlicious-restaurants-menus/?view=tabList&dpa=yes&key=" + resto['lic_documentID']
+    menulink = "https://www.toronto.ca/explore-enjoy/festivals-events/summerlicious/summerlicious-restaurants-menus/?view=tabList&key=" + resto['lic_documentID']
 
     #write the rating to the CSV with some other details about the restaurant
     line = [resto['lic_restName'],rating,resto['lic_address'],resto['lic_postal'],resto['lic_lat'],resto['lic_lng'],resto['lic_lunchprice'],resto['lic_dinnerprice'],menulink]
